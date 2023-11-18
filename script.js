@@ -5,11 +5,12 @@ const btn = document.querySelector("button");
 btn.addEventListener("click", addTask);
 
 function addTask() {
-	if (inputBox.value === "") {
+	const inputValue = inputBox.value.trim();
+	if (inputValue === "") {
 		alert("You must write something!");
 	} else {
 		let li = document.createElement("li");
-		li.innerHTML = inputBox.value;
+		li.innerHTML = inputValue;
 		listContainer.appendChild(li);
 
 		let span = document.createElement("span");
